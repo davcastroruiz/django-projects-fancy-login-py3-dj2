@@ -1,0 +1,37 @@
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                    <!-- Begin # Login Form -->
+                    <form id="login-form" action="{% url 'principal:login' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+		                <div class="modal-body">
+				    		<div id="div-login-msg" style="padding-bottom: 10px"><div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Type your username and password.</span>
+                            </div>
+				    		<div style="padding-bottom: 20px">
+                            <input id="login_username" name = 'u' class="form-control" type="text" placeholder="Username" required>
+                            </div>
+				    		<input id="login_password" name = 'p' class="form-control" type="password" placeholder="Password" required>
+
+        		    	</div>
+				        <div class="modal-footer">
+                            <div class="container" align="center">
+                                <button style="width: auto" type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            </div>
+				        </div>
+                    </form>
+                </div>
+                <!-- End # DIV Form -->
+
+			</div>
+		</div>
+	</div>
